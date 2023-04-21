@@ -34,8 +34,6 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     'nuxt-typed-vuex',
-    '@nuxtjs/style-resources',
-
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -43,7 +41,10 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/auth-next',
+    'nuxt-mq'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -58,6 +59,43 @@ export default {
 
   bootstrapVue: {
     bootstrapCSS: false,
-    bootstrapVueCSS: false
+    bootstrapVueCSS: false,
+    icons:true
+  },
+  styleResources: {
+    scss: [
+      '@/assets/styles/custom.scss',
+      '@/assets/styles/helpers.scss'
+    ]
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: "/login",
+            method: "post",
+          },
+          logout: {
+            url: "/logout",
+            method: "post"
+          },
+          user: {
+            url: "/user",
+            method: "get",
+          }
+        }
+        // tokenRequired: true,
+        // tokenType: 'bearer',
+      }
+    }
+  },
+  'mq': {
+    defaultBreakpoint: 'sm',
+    breakpoints: {
+      sm: 480,
+      md: 720,
+      lg: Infinity,
+    }
   }
 }

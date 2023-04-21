@@ -1,4 +1,3 @@
-// Custom Bootstrap variable overrides go first
 $grid-breakpoints: (
   xs: 0,
   sm: 480px,
@@ -6,19 +5,17 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1300px
 );
-$input-btn-focus-width: 0px;
-//colors
-$primary: #e7ee7e;
-$secondary: #888888;
-$body-bg: #000;
-$body-color: #fff;
 
-// Then include the following
-@import 'bootstrap/scss/bootstrap.scss';
-@import 'bootstrap-vue/src/index.scss';
+@import './variables';
 
-// And define any of your custom or additional CSS/SCSS here,
-// or via an @import
-.btn{
-    border: none;
+$body-bg: $dark;
+$body-color: $light;
+$line-height-base:1;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+.form-control{
+  background: rgba(0,0,0,0);
+  border: 2px solid $secondary;
 }

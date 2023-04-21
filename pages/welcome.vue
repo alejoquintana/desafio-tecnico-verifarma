@@ -1,12 +1,12 @@
 <template>
-  <Home />
+  <Welcome />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage',
-  layout:'admin',
+  name: 'WelcomePage',
+  layout:'default'
 })
 </script>

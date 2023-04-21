@@ -1,0 +1,52 @@
+@import './variables';
+
+.fc{
+  display: flex;
+  justify-content: center;
+}
+.fcc{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.center-container{
+  @extend .display-size;
+  @extend .fcc;
+  align-items: center;
+  //width: 100vw;
+  //height: 100vh;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+}
+
+.display-size{
+  width: 100vw;
+  height: 100vh;
+}
+.test-fixed{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: #000;
+}
+
+.primary{color: $primary;}
+.secondary{color: $secondary;}
+
+.fs-20{font-size: 20px;}
+.fs-24{font-size: 24px;}
+.fs-28{font-size: 28px;}
+.fs-32{font-size: 32px;}
+.bold{font-weight: bold;}
