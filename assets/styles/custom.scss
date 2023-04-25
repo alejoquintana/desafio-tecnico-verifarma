@@ -10,12 +10,21 @@ $grid-breakpoints: (
 
 $body-bg: $dark;
 $body-color: $light;
-$line-height-base:1;
+$line-height-base:1.2;
+$input-bg: rgba(0,0,0,0);
+
+$font-size-base: 1.2rem;
+//$input-placeholder-color: $light;
 
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
 
 .form-control{
-  background: rgba(0,0,0,0);
   border: 2px solid $secondary;
+	color: #fff;
+  //font-size: 2rem;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
 }

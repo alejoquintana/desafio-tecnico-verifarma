@@ -1,52 +1,122 @@
 @import './variables';
 
-.fc{
-  display: flex;
-  justify-content: center;
-}
-.fcc{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.max-width-nuxt {
+	max-width: 1300px;
 }
 
-.w-100{
-  width: 100%;
+.fc {
+	display: flex;
+	justify-content: center;
 }
 
-.fixed{
-  position: fixed;
+.fcc {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 }
 
-.center-container{
-  @extend .display-size;
-  @extend .fcc;
-  align-items: center;
-  //width: 100vw;
-  //height: 100vh;
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
+.w-100 {
+	width: 100%;
 }
 
-.display-size{
-  width: 100vw;
-  height: 100vh;
-}
-.test-fixed{
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  background: #fff;
-  color: #000;
+.fixed {
+	position: fixed;
 }
 
-.primary{color: $primary;}
-.secondary{color: $secondary;}
+.center-container {
+	@extend .display-size;
+	@extend .fcc;
+	align-items: center;
+	//width: 100vw;
+	//height: 100vh;
+	//display: flex;
+	//flex-direction: column;
+	//justify-content: center;
+}
 
-.fs-20{font-size: 20px;}
-.fs-24{font-size: 24px;}
-.fs-28{font-size: 28px;}
-.fs-32{font-size: 32px;}
-.bold{font-weight: bold;}
+.display-size {
+	width: 100vw;
+	height: 100vh;
+}
+
+.test-fixed {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	background: #fff;
+	color: #000;
+}
+
+.primary {
+	color: $primary;
+}
+
+.secondary {
+	color: $secondary;
+}
+
+.white {
+	color: #fff;
+}
+
+.white {
+	color: $white;
+}
+
+.fs-20 {
+	font-size: 20px;
+}
+
+.fs-24 {
+	font-size: 24px;
+}
+
+.fs-28 {
+	font-size: 28px;
+}
+
+.fs-32 {
+	font-size: 32px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.gap-10 {
+	gap: 10px;
+}
+
+.gap-15 {
+	gap: 15px;
+}
+
+.gap-20 {
+	gap: 20px;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.bottom {
+	bottom: 0;
+}
+
+.border-title {
+	border-bottom: 2px solid $primary;
+	margin-bottom: 12px;
+}
+.border-title-secondary {
+	border-bottom: 2px solid $secondary;
+	margin-bottom: 12px;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.left-0{
+	left: 0;
+}

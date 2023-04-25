@@ -23,8 +23,9 @@ export default {
   css: ['@/assets/styles/custom.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+	plugins: [
+		{ src: '@/plugins/Vuelidate' }
+	],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

@@ -1,26 +1,9 @@
 <template>
 	<div>
 		<div class="bg-movies-posters"></div>
-		<NavBar/>
-		<div class="max-width-nuxt m-auto px-3">
-			<div v-if="$route.name != 'index'" class="my-4">
-				<b-button @click="$router.back()" variant="link">
-					<b-icon icon="chevron-left"></b-icon> Back
-				</b-button>
-			</div>
 			<Nuxt />
-		</div>
 	</div>
 </template>
-
-<script>
-import NavBar from "@/components/layout/NavBar.vue";
-export default {
-	components:{
-		NavBar
-	},
-}
-</script>
 
 <style lang='scss' scoped>
 .bg-movies-posters {

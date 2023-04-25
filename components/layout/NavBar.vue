@@ -1,23 +1,21 @@
 <template>
-	<div>
-		<div class="bg-movies-posters"></div>
-		<NavBar/>
-		<div class="max-width-nuxt m-auto px-3">
-			<div v-if="$route.name != 'index'" class="my-4">
-				<b-button @click="$router.back()" variant="link">
-					<b-icon icon="chevron-left"></b-icon> Back
-				</b-button>
+		<div class="nav-bar py-3">
+			<div class="navbar-container max-width-nuxt m-auto px-lg-3">
+				<span @click="go('/')" class="pointer bold fs-24">Verifarma+</span>
+				<p class="pointer" @click="go('search')" v-if="$route.name!='search'">
+					<b-icon icon="search" class="mr-2"></b-icon>
+					<span v-if="$mq=='lg'">Search</span>
+				</p>
 			</div>
-			<Nuxt />
 		</div>
-	</div>
 </template>
 
 <script>
-import NavBar from "@/components/layout/NavBar.vue";
 export default {
-	components:{
-		NavBar
+	methods: {
+		go(page){
+			this.$router.push(page)
+		}
 	},
 }
 </script>

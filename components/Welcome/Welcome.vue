@@ -9,35 +9,12 @@
         </p>
       </div>
     <div class="fc w-100 fixed" style="bottom: 50px;">
-      <b-button variant="link" size="lg" class="btn btn-login" to="/login">iniciá sesión</b-button>
+      <b-button variant="link" size="lg" class="btn btn-login" to="/login">Sign in</b-button>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-    components: {
-
-    },
-    data(){return{
-
-    }},
-    computed: {
-      //movies
-    },
-    methods: {
-
-    },
-    mounted(){
-
-    }
-}
-</script>
-
 <style lang='scss' scoped>
-
-.btn-login{
-}
 .name-page{
   font-size: 52px;
   font-weight: bold;

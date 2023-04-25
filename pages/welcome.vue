@@ -7,6 +7,6 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'WelcomePage',
-  layout:'default'
+  layout:'welcome'
 })
 </script>

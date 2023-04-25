@@ -1,13 +1,11 @@
 <template>
-  <Home />
+	<Admin />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
-  name: 'IndexPage',
-  layout:'default',
-	middleware: 'authenticated'
+	name: 'AdminPage',
+	layout: 'admin',
 })
 </script>
