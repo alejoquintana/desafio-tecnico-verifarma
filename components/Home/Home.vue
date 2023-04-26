@@ -1,22 +1,19 @@
 <template>
 	<div>
 		<h1 class="text-center py-4">Movies of your favourite Superheros</h1>
-		<div class="movies-container row no-gutters">
-			<div v-for="movieByHero, i in moviesByHeros" :key="i" class="movies-heros row mt-4">
-				<h2 class="col-12 text-capitalize border-title-secondary">{{ movieByHero.hero }}</h2>
-				<div v-for="movie, i in movieByHero.movies" :key="i" class="col-2 py-3">
-					<div class="movie-col">
-						<div class="poster-box" @click="go(movie.imdbID)">
-							<img :src="movie.poster" alt="movie poster" class="poster">
-							<div class="movie-title">
-								<span class="text-truncate">{{ movie.title }}</span>
-								<b-icon icon="play-circle" variant="primary"></b-icon>
-							</div>
+		<b-row class="mt-4">
+			<b-col cols="6" lg="2" v-for="movie, i in movies" :key="i" class="py-3">
+				<div class="movie-col">
+					<div class="poster-box" @click="go(movie.imdbID)">
+						<img :src="poster(movie.Poster)" alt="movie poster" class="poster">
+						<div class="movie-title">
+							<span class="text-truncate">{{ movie.Title }}</span>
+							<b-icon icon="play-circle" variant="primary"></b-icon>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</b-col>
+		</b-row>
 	</div>
 </template>
 
@@ -33,11 +30,18 @@ export default {
 		}
 	},
 	computed: {
-		moviesByHeros() {
-			return this.$accessor.movies.moviesByHeros
+		movies() {
+			return this.$accessor.movies.movies
 		}
 	},
 	methods: {
+		poster(url){
+			if (!url) {
+				console.log('this.$accessor.no_poster',this.$accessor.no_poster);
+				return this.$accessor.no_poster
+			}
+			return url
+		},
 		setLoading(value) {
 			this.loading = value
 		},
@@ -45,10 +49,10 @@ export default {
 			this.selectedMovie = movie
 		},
 		go(imdbID) {
-			this.$router.push('/'+imdbID)
+			this.$router.push('/' + imdbID)
 		}
 	},
-	mounted() {
+	beforeCreate() {
 		this.$accessor.movies.fetchMovies()
 	}
 }
@@ -61,7 +65,7 @@ export default {
 	overflow: hidden;
 
 	.poster-box {
-        position: relative;
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -71,6 +75,7 @@ export default {
 		}
 
 	}
+
 	.movie-title {
 		color: #fff;
 		display: flex;

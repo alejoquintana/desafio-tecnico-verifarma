@@ -2,6 +2,7 @@
 		<div class="nav-bar py-3">
 			<div class="navbar-container max-width-nuxt m-auto px-lg-3">
 				<span @click="go('/')" class="pointer bold fs-24">Verifarma+</span>
+				<span v-if="$accessor.user.admin" @click="go('/admin')" class="pointer fs-24">Admin</span>
 				<p class="pointer" @click="go('search')" v-if="$route.name!='search'">
 					<b-icon icon="search" class="mr-2"></b-icon>
 					<span v-if="$mq=='lg'">Search</span>

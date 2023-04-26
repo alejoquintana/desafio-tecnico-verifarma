@@ -15,4 +15,12 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
-```bash
+## Librerias usadas
+
+-bootstrap-vue
+-sass
+-nuxt-mq
+
+## Autenticación
+
+La autenticación es dummy, pero se puede diferenciar entre admin y usuario normal simplemente ingresando con un mail de domino @admin para ser admin.

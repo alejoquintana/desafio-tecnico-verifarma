@@ -9,6 +9,8 @@ import MovieInfo from '@/components/Home/MovieInfo.vue';
 export default Vue.extend({
     name: "MoviePage",
     layout: "default",
-    components: { MovieInfo }
+    components: { MovieInfo },
+		middleware: 'authenticated'
+
 })
 </script>

@@ -7,5 +7,6 @@ import Vue from 'vue'
 export default Vue.extend({
 	name: 'AdminPage',
 	layout: 'admin',
+	middleware: 'authenticated'
 })
 </script>
