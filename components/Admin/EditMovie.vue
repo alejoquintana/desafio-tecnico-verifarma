@@ -81,7 +81,7 @@
 						</div>
 						<div v-if="movie.Ratings && movie.Ratings.length">
 							<div v-for="rating in movie.Ratings" class="d-flex gap-10 align-items-center mt-3">
-								<b-icon @click="destroyRating(source)" icon="plus-circle" variant="primary" class="pointer"></b-icon>
+								<b-icon @click="destroyRating(rating.Source)" icon="trash" variant="primary" class="pointer"></b-icon>
 								<span>{{ rating.Source}}</span>
 								<b-form-input v-model="rating.Value"></b-form-input>
 							</div>

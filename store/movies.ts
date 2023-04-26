@@ -59,9 +59,9 @@ export const mutations = mutationTree(state, {
 	},
 	deleteRating(state, {imdbID,source}){
 		state.fullMovies.forEach((movie)=>{
-			if (movie.imdbID == imdbID){
+			if (movie.imdbID == imdbID && movie.Ratings){
 				movie.Ratings = movie.Ratings.filter((rating)=>{
-					return rating.source != source
+					return rating.Source != source
 				})
 			}
 		})
@@ -86,13 +86,11 @@ export const actions = actionTree(
     },
     async fetchMovieSelected({ state, commit }, imdbID) {
       var res
-			console.log('imdbID',imdbID);
       try {
 				res = await this.$axios.$get(`http://www.omdbapi.com/?i=${imdbID}&plot=full&${apikey}`)
       } catch (error) {
 				console.error(error)
       }
-			console.log('res',res);
       commit('pushFullMovie', res)
     },
     async create({ state, commit }, data) {

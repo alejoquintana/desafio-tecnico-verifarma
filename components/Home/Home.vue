@@ -37,7 +37,6 @@ export default {
 	methods: {
 		poster(url){
 			if (!url) {
-				console.log('this.$accessor.no_poster',this.$accessor.no_poster);
 				return this.$accessor.no_poster
 			}
 			return url

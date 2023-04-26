@@ -1,8 +1,8 @@
 import Movie from "@/modules/Movie";
 
 export default interface rating{
-	source: string
-	value: string
+	Source: string
+	Value: string
 }
 
 export default interface FullMovie extends Movie {

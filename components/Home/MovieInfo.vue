@@ -71,10 +71,10 @@ export default {
 			return this.$accessor.movies.getMovieSelected(this.$route.params.movie)
 		},
 		poster() {
-			if (this.movie && !this.movie.poster) {
+			if (this.movie && !this.movie.Poster) {
 				return this.$accessor.no_poster
 			}
-			return this.$accessor.movies.getMovieSelected(this.$route.params.movie)
+			return this.movie.Poster
 		}
 	},
 	methods: {
